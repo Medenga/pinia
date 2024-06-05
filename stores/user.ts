@@ -21,14 +21,15 @@ export const useMyUserStore = defineStore("user", () => {
             setUser();
             console.log();
         }
-    }
+    };
     const fetchCustomer = async () => {
-    if (token.value) {
-        try {
-            const res = await $fetch<Customer>("https://dummyjson.com/users/1")
-        } catch (error) {
-            setUser();
-            console.log(error);
+        if (token.value) {
+            try {
+                const res = await $fetch<Customer>("https://dummyjson.com/users/1")
+            } catch (error) {
+                setUser();
+                console.log(error);
+            }
         }
-    }
-})
+    };
+});
