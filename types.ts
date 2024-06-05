@@ -1,12 +1,17 @@
 export interface User {
-    id: number;
+    id:        number;
+    username:  string;
+    email:     string;
+    firstName: string;
+    lastName:  string;
+    gender:    string;
+    image:     string;
+    token:     string;
+}
+
+export interface Login{
     username: string;
-    email: string;
-    firstName: string; 
-    lastName: string;
-    gender: string; 
-    image: string;
-    token:string;
+    password: string;
 }
 
 export interface Customer {
@@ -56,6 +61,7 @@ export interface Bank {
     cardNumber: string; 
     cardType: string;
     currency: string;
+    iban: string;
 }
 
 export interface Company {
